@@ -14,6 +14,7 @@ import {
   SheetTrigger 
 } from "@/components/ui/sheet";
 import { useLocation } from "wouter";
+import { MOCK_USER, MOCK_BALANCES } from "@/lib/mockData";
 
 const navItems = [
   { name: "Overview", href: "/dashboard", icon: Wallet },
@@ -91,8 +92,6 @@ export function DashboardTopbar({ userName, totalBalance }: { userName: string, 
 }
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const { MOCK_USER, MOCK_BALANCES } = require('@/lib/mockData');
-  
   return (
     <div className="min-h-screen bg-background flex flex-col md:flex-row w-full font-sans">
       <DashboardSidebar />

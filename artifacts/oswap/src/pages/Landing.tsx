@@ -18,7 +18,8 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-[3.6rem] md:text-[5.4rem] font-bold tracking-tight text-foreground leading-[1.05]"
+              className="font-['Poppins'] font-bold text-[3.6rem] md:text-[5.4rem] tracking-tight text-foreground leading-[1.05]"
+              style={{ fontWeight: 700 }}
             >
               <span className="block">Spend</span>
               <span className="block">Without</span>
@@ -54,7 +55,7 @@ export default function Landing() {
               alt="OSWAP"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-              className="w-full max-w-[36rem] aspect-square object-contain"
+              className="w-full max-w-[43.2rem] aspect-square object-contain"
             />
           </motion.div>
         </div>

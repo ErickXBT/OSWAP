@@ -11,33 +11,51 @@ export default function Landing() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 max-w-[1200px] mx-auto text-center flex flex-col items-center justify-center min-h-[70vh]">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
-        >
-          Spend Without Limits
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 text-xl text-muted-foreground max-w-2xl"
-        >
-          Generate a global payment card from crypto or fiat. The precision of Stripe, built for a borderless economy.
-        </motion.p>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-10 flex gap-4"
-        >
-          <Button size="lg" asChild className="text-base px-8 h-12 rounded-md">
-            <Link href="/dashboard">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
-          </Button>
-        </motion.div>
+      <section className="pt-24 pb-20 px-6 max-w-[1200px] mx-auto min-h-[80vh] flex items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+          <div className="flex flex-col items-start text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
+            >
+              <span className="block">Spend</span>
+              <span className="block">Without</span>
+              <span className="block">Limits</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-6 text-xl text-muted-foreground max-w-md"
+            >
+              Generate a global payment card from crypto or fiat. The precision of Stripe, built for a borderless economy.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-10 flex gap-4"
+            >
+              <Button size="lg" asChild className="text-base px-8 h-12 rounded-md">
+                <Link href="/dashboard">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="flex justify-center md:justify-end"
+          >
+            <img
+              src={oswapLogo}
+              alt="OSWAP"
+              className="w-full max-w-md aspect-square object-contain"
+            />
+          </motion.div>
+        </div>
       </section>
 
       {/* Features Section */}

@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Lock, Zap } from "lucide-react";
+import oswapLogo from "@/assets/oswap-logo.png";
 
 export default function Landing() {
   return (
@@ -102,7 +103,10 @@ export default function Landing() {
       {/* Footer */}
       <footer className="border-t border-border py-12">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground">
-          <div className="font-bold text-foreground text-xl tracking-tight">OSWAP</div>
+          <div className="flex items-center gap-2 font-bold text-foreground text-xl tracking-tight">
+            <img src={oswapLogo} alt="OSWAP" className="h-7 w-7 object-contain" />
+            OSWAP
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>

@@ -15,6 +15,16 @@ import {
 } from "@/components/ui/sheet";
 import { useLocation } from "wouter";
 import { MOCK_USER, MOCK_BALANCES } from "@/lib/mockData";
+import oswapLogo from "@/assets/oswap-logo.png";
+
+function OswapMark({ className = "" }: { className?: string }) {
+  return (
+    <span className={`flex items-center gap-2 font-bold text-xl tracking-tight ${className}`}>
+      <img src={oswapLogo} alt="OSWAP" className="h-7 w-7 object-contain" />
+      OSWAP
+    </span>
+  );
+}
 
 const navItems = [
   { name: "Overview", href: "/dashboard", icon: Wallet },
@@ -54,12 +64,12 @@ export function DashboardSidebar() {
   return (
     <>
       <div className="hidden md:flex flex-col w-64 border-r border-border h-screen sticky top-0 bg-background px-4 py-6">
-        <Link href="/" className="font-bold text-xl tracking-tight px-3">OSWAP</Link>
+        <Link href="/" className="px-3"><OswapMark /></Link>
         <NavLinks />
       </div>
       
       <div className="md:hidden flex items-center justify-between p-4 border-b border-border bg-background sticky top-0 z-40">
-        <Link href="/" className="font-bold text-xl tracking-tight">OSWAP</Link>
+        <Link href="/"><OswapMark /></Link>
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon">
@@ -67,7 +77,7 @@ export function DashboardSidebar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col w-64 p-4 pt-12">
-            <Link href="/" className="font-bold text-xl tracking-tight px-3 mb-4">OSWAP</Link>
+            <Link href="/" className="px-3 mb-4 inline-block"><OswapMark /></Link>
             <NavLinks />
           </SheetContent>
         </Sheet>

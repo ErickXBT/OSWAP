@@ -1,0 +1,54 @@
+:root {
+  --cut-top: 50%;
+  --cut-bottom: 60%;
+}
+
+.slice-section {
+  background: #000;
+  color: #fff;
+  font-family: system-ui;
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: 4rem 1rem;
+}
+
+.slice-section .slice {
+  display: grid;
+  font-weight: 800;
+  font-size: clamp(4rem, 14vw, 10rem);
+  letter-spacing: 0.15em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.slice-section .slice:focus {
+  outline-color: #fff;
+  outline-offset: 0.2em;
+}
+
+.slice-section .slice__text {
+  grid-area: 1 / 1;
+  clip-path: polygon(0 0, 100% 0, 100% var(--cut-top), 0 var(--cut-bottom));
+}
+
+.slice-section .slice:after {
+  grid-area: 1 / 1;
+  rotate: -1deg;
+  display: inline-block;
+  content: attr(data-text);
+  user-select: none;
+  transform: translate(-0.03em, 0.04em);
+  color: transparent;
+  background-image: linear-gradient(179deg, #000 var(--cut-top), #fff 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  clip-path: polygon(0 var(--cut-bottom), 100% var(--cut-top), 100% 100%, 0 100%);
+}
+
+.slice-section .small {
+  text-align: center;
+  margin: 0;
+  font-size: 0.8em;
+}

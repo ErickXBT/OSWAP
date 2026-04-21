@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
+import { SliceSection } from "@/components/SliceSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Lock, Zap } from "lucide-react";
 import oswapLogo from "@/assets/oswap-logo.png";
@@ -120,6 +121,8 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      <SliceSection />
 
       {/* Footer */}
       <footer className="border-t border-border py-12">

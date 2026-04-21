@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { SliceSection } from "@/components/SliceSection";
 import { PrecisionSection } from "@/components/PrecisionSection";
 import { HeroSphereSection } from "@/components/HeroSphereSection";
+import { VortexSection } from "@/components/VortexSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Lock, Zap } from "lucide-react";
 import oswapLogo from "@/assets/oswap-logo.png";
@@ -63,6 +64,8 @@ export default function Landing() {
           </motion.div>
         </div>
       </section>
+
+      <VortexSection />
 
       {/* Features Section */}
       <section id="features" className="py-24 bg-secondary/30 border-y border-border/40">

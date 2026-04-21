@@ -1,0 +1,104 @@
+Build a production-ready web app for a fintech product called "OSWAP".
+
+IMPORTANT DESIGN DIRECTION:
+- Clean, modern, minimal — NOT generic AI-looking design
+- Strong Swiss-style layout (grid-based, lots of whitespace)
+- Black & white color scheme only (no gradients, no flashy colors)
+- Typography-driven design (use Inter or Helvetica Neue style)
+- Professional fintech feel (like Stripe, Apple, Linear)
+- Avoid overused UI patterns (no glassmorphism, no neon glow, no excessive shadows)
+
+LOGO:
+Use this logo: https://imgur.com/XWa5b5y
+Place it cleanly in the navbar (left side)
+
+---
+
+CORE PRODUCT IDEA:
+OSWAP is a wallet platform that allows users to:
+- Deposit crypto and fiat
+- Generate a virtual Mastercard
+- Use the card for global payments (subscriptions, SaaS, etc.)
+
+---
+
+TECH STACK:
+- Frontend: Next.js (React)
+- Styling: TailwindCSS
+- Backend: Node.js (API routes)
+- No database needed yet (mock data is fine for MVP)
+
+---
+
+PAGES TO BUILD:
+
+1. LANDING PAGE
+Sections:
+- Hero:
+  Headline: "Spend Without Limits"
+  Subtext: "Generate a global payment card from crypto or fiat"
+  CTA: "Get Started"
+
+- Features (3 columns):
+  - Instant Virtual Card
+  - Crypto + Fiat Support
+  - Global Payments
+
+- How It Works (simple 3 steps):
+  Deposit → Generate Card → Spend Anywhere
+
+- Minimal footer
+
+---
+
+2. DASHBOARD (after login, mock auth is fine)
+Layout:
+- Left sidebar (minimal icons + labels)
+- Top bar (balance + user)
+
+Pages inside dashboard:
+- Overview:
+  Show total balance (crypto + fiat)
+  Show recent transactions (mock data)
+
+- Card:
+  Display virtual card UI (clean, realistic but minimal)
+  Show card number masked
+  Button: "Reveal card" (mock)
+
+- Deposit:
+  Show options:
+    - Crypto deposit address (mock)
+    - Fiat deposit (mock form)
+
+---
+
+UI STYLE RULES:
+- Use a strict grid system
+- Max width container (1200px)
+- Generous spacing (padding, margin)
+- Use subtle borders instead of shadows
+- Rounded corners: small (6-10px only)
+- Animations: very subtle (fade, slight hover)
+
+---
+
+DO NOT:
+- Do not use bright colors
+- Do not use gradients
+- Do not make it look like a template
+- Do not overdesign
+
+---
+
+EXTRA TOUCH:
+- Add small micro-interactions (hover states)
+- Add realistic fintech copywriting (short, sharp, confident)
+- Make it feel like a real startup website, not a demo
+
+---
+
+OUTPUT:
+- Fully working Next.js project
+- Clean folder structure
+- Reusable components (Navbar, Card UI, Sidebar)

@@ -15,6 +15,7 @@ export function Navbar() {
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How it Works</a>
             <a href="#security" className="hover:text-foreground transition-colors">Security</a>
+            <Link href="/wallet" className="hover:text-foreground transition-colors">Wallet</Link>
           </div>
         </div>
         <div className="flex items-center gap-4">

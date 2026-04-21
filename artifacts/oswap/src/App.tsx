@@ -7,6 +7,7 @@ import Landing from "@/pages/Landing";
 import Overview from "@/pages/dashboard/Overview";
 import CardPage from "@/pages/dashboard/CardPage";
 import DepositPage from "@/pages/dashboard/DepositPage";
+import WalletPage from "@/pages/WalletPage";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/dashboard" component={Overview} />
       <Route path="/dashboard/card" component={CardPage} />
       <Route path="/dashboard/deposit" component={DepositPage} />
+      <Route path="/wallet" component={WalletPage} />
       <Route component={NotFound} />
     </Switch>
   );

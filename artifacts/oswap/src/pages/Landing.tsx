@@ -18,7 +18,7 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
+              className="text-[3.6rem] md:text-[5.4rem] font-bold tracking-tight text-foreground leading-[1.05]"
             >
               <span className="block">Spend</span>
               <span className="block">Without</span>
@@ -49,10 +49,12 @@ export default function Landing() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="flex justify-center md:justify-end"
           >
-            <img
+            <motion.img
               src={oswapLogo}
               alt="OSWAP"
-              className="w-full max-w-md aspect-square object-contain"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              className="w-full max-w-[36rem] aspect-square object-contain"
             />
           </motion.div>
         </div>

@@ -1,0 +1,148 @@
+You are a senior full-stack engineer.
+
+Your task is to ADD a new feature to an existing production website called "OSWAP" WITHOUT modifying, breaking, or rewriting any existing files, styles, or functionality.
+
+STRICT RULES:
+- Do NOT change any existing code
+- Do NOT refactor existing structure
+- Only ADD new files and connect them safely
+- Follow existing design system (black & white, clean, modern UI)
+- Use the existing logo: https://imgur.com/XWa5b5y
+- The UI must look human-designed (NOT AI generic)
+
+--------------------------------------------------
+
+🎯 FEATURE TO ADD: WALLET PAGE (PRODUCTION-READY STRUCTURE)
+
+Create a new route/page:
+
+/wallet
+
+--------------------------------------------------
+
+🧩 FRONTEND REQUIREMENTS
+
+Build a clean dashboard-style wallet UI with:
+
+1. Wallet Overview Card
+   - Total Balance (USD)
+   - Crypto Balances (BTC, ETH, SOL, USDT)
+   - Fiat Balance (USD)
+
+2. Actions Section
+   - Deposit
+   - Withdraw
+   - Send
+   - Receive
+
+3. Transaction History
+   - Table with:
+     - Date
+     - Type (Send/Receive)
+     - Asset
+     - Amount
+     - Status
+
+4. Wallet Address Section
+   - Generate wallet address
+   - Copy button
+
+5. Connect Wallet (Web3 Ready)
+   - MetaMask / Phantom button
+
+Use:
+- React (if project uses it)
+- Tailwind or existing CSS system
+- Component-based structure
+
+--------------------------------------------------
+
+⚙️ BACKEND (CREATE NEW ONLY)
+
+Create a minimal backend structure:
+
+/api/wallet/
+
+Features:
+- GET /balance
+- GET /transactions
+- POST /generate-address
+- POST /send
+
+Use:
+- Node.js (Express or existing stack)
+- Mock blockchain layer (for now)
+- Structure it so real blockchain (ethers.js / solana/web3.js) can be plugged in later
+
+--------------------------------------------------
+
+🔐 WALLET SYSTEM DESIGN
+
+Design as NON-CUSTODIAL READY:
+
+- Do NOT store private keys in plain text
+- Use placeholder secure vault structure
+- Prepare for:
+  - encryption layer
+  - user authentication binding
+
+--------------------------------------------------
+
+🧠 AI-READY ARCHITECTURE
+
+Prepare hooks for future AI features:
+
+- smartMoneyTracking()
+- detectWhaleActivity()
+- portfolioPrediction()
+
+Just create placeholders (no implementation yet)
+
+--------------------------------------------------
+
+🎨 UI STYLE
+
+- Black & White theme
+- Minimalist
+- Premium fintech look
+- Smooth hover effects
+- Rounded cards
+- Clean typography
+
+--------------------------------------------------
+
+🧱 FILE STRUCTURE (IMPORTANT)
+
+DO NOT TOUCH EXISTING FILES.
+
+Create new structure like:
+
+/wallet
+  WalletPage.jsx
+  WalletCard.jsx
+  TransactionTable.jsx
+  ActionsPanel.jsx
+
+/api/wallet
+  walletController.js
+  walletRoutes.js
+  walletService.js
+
+--------------------------------------------------
+
+🔌 INTEGRATION
+
+- Add navigation link to "/wallet" ONLY IF safe
+- If not safe, provide manual instruction
+
+--------------------------------------------------
+
+🚀 OUTPUT
+
+- Provide FULL CODE for all new files
+- Explain where to place each file
+- Ensure it runs without breaking existing site
+
+--------------------------------------------------
+
+This must feel like a real fintech product, not a prototype.

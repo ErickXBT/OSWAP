@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { SliceSection } from "@/components/SliceSection";
+import { PrecisionSection } from "@/components/PrecisionSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Lock, Zap } from "lucide-react";
 import oswapLogo from "@/assets/oswap-logo.png";
@@ -96,6 +97,8 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      <PrecisionSection />
 
       {/* How it Works */}
       <section id="how-it-works" className="py-32">

@@ -33,7 +33,7 @@ export function SliceSection() {
   return (
     <section className="slice-section">
       <div className="box">
-        <p className="small">Edit me!</p>
+        <p className="small">Hello!</p>
         <p
           ref={elRef}
           className="slice"

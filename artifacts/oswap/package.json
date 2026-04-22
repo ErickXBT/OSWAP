@@ -45,6 +45,7 @@
     "@tailwindcss/vite": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@types/node": "catalog:",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@types/three": "^0.184.0",
@@ -77,6 +78,7 @@
   },
   "dependencies": {
     "gsap": "^3.15.0",
+    "qrcode": "^1.5.4",
     "three": "^0.184.0"
   }
 }

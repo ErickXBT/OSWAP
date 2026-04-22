@@ -19,9 +19,9 @@ export function Navbar() {
             OSWAP
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+            <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-foreground transition-colors">How it Works</a>
-            <a href="#security" className="hover:text-foreground transition-colors">Security</a>
             <Link href="/wallet" className="hover:text-foreground transition-colors">Wallet</Link>
           </div>
         </div>

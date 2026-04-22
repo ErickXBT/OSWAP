@@ -70,34 +70,25 @@ export default function Landing() {
       {/* Features Section */}
       <section id="features" className="py-16 md:py-24 bg-secondary/30 border-y border-border/40">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 bg-background border border-border flex items-center justify-center rounded-lg">
-                <Zap className="w-6 h-6 text-foreground" />
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { Icon: Zap, title: "Instant Virtual Card", desc: "Generate a Mastercard in seconds. No credit checks, no waiting periods. Start spending immediately on any platform." },
+              { Icon: Lock, title: "Crypto + Fiat Support", desc: "Deposit USDC, ETH, BTC, or traditional fiat. Your balances are unified and instantly available to spend anywhere." },
+              { Icon: Globe, title: "Global Payments", desc: "Accepted by millions of merchants worldwide. Pay for SaaS, flights, ads, and subscriptions without friction." },
+            ].map(({ Icon, title, desc }, i) => (
+              <div
+                key={i}
+                className="group relative flex flex-col gap-4 p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]"
+              >
+                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/15 via-white/5 to-transparent opacity-60" />
+                <div className="pointer-events-none absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                <div className="relative w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center rounded-xl shadow-inner">
+                  <Icon className="w-6 h-6 text-foreground" />
+                </div>
+                <h3 className="relative text-xl font-semibold">{title}</h3>
+                <p className="relative text-muted-foreground leading-relaxed">{desc}</p>
               </div>
-              <h3 className="text-xl font-semibold">Instant Virtual Card</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Generate a Mastercard in seconds. No credit checks, no waiting periods. Start spending immediately on any platform.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 bg-background border border-border flex items-center justify-center rounded-lg">
-                <Lock className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold">Crypto + Fiat Support</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Deposit USDC, ETH, BTC, or traditional fiat. Your balances are unified and instantly available to spend anywhere.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 bg-background border border-border flex items-center justify-center rounded-lg">
-                <Globe className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold">Global Payments</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Accepted by millions of merchants worldwide. Pay for SaaS, flights, ads, and subscriptions without friction.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

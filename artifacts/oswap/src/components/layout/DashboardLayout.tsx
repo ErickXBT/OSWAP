@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { 
@@ -16,6 +17,7 @@ import {
 import { useLocation } from "wouter";
 import { MOCK_USER, MOCK_BALANCES } from "@/lib/mockData";
 import oswapLogo from "@/assets/oswap-logo.png";
+import { SettingsDialog } from "@/components/SettingsDialog";
 
 function OswapMark({ className = "" }: { className?: string }) {
   return (
@@ -33,7 +35,8 @@ const navItems = [
 ];
 
 export function DashboardSidebar() {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   const NavLinks = () => (
     <>
@@ -49,11 +52,17 @@ export function DashboardSidebar() {
         })}
       </div>
       <div className="mt-auto flex flex-col gap-1 w-full pb-4">
-        <button className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors">
+        <button
+          onClick={() => setSettingsOpen(true)}
+          className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors text-left"
+        >
           <Settings className="h-4 w-4" />
           Settings
         </button>
-        <button className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors">
+        <button
+          onClick={() => setLocation("/")}
+          className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors text-left"
+        >
           <LogOut className="h-4 w-4" />
           Log Out
         </button>
@@ -82,6 +91,8 @@ export function DashboardSidebar() {
           </SheetContent>
         </Sheet>
       </div>
+
+      <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
     </>
   );
 }

@@ -102,20 +102,23 @@ export default function Landing() {
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 md:mb-16">Three steps to borderless spending</h2>
           
-          <div className="grid md:grid-cols-3 gap-10 md:gap-8 relative">
-            <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-[1px] bg-border z-0"></div>
-            
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 relative">
             {[
               { num: "01", title: "Deposit Funds", desc: "Send crypto to your unique address or wire fiat via ACH/SEPA." },
               { num: "02", title: "Generate Card", desc: "Click a button to issue your virtual Mastercard instantly." },
               { num: "03", title: "Spend Anywhere", desc: "Use your card details to pay for anything, anywhere online." }
             ].map((step, i) => (
-              <div key={i} className="relative z-10 flex flex-col items-center text-center bg-background px-4">
-                <div className="w-16 h-16 bg-background border border-border rounded-full flex items-center justify-center text-xl font-bold mb-6">
+              <div
+                key={i}
+                className="group relative z-10 flex flex-col items-center text-center px-6 pt-10 pb-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]"
+              >
+                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/15 via-white/5 to-transparent opacity-60" />
+                <div className="pointer-events-none absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                <div className="relative w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-inner">
                   {step.num}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.desc}</p>
+                <h3 className="relative text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="relative text-muted-foreground">{step.desc}</p>
               </div>
             ))}
           </div>

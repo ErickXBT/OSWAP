@@ -175,7 +175,13 @@ export default function Landing() {
       <footer className="border-t border-border py-8 md:py-12">
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground text-center md:text-left">
           <div className="flex items-center gap-2 font-bold text-foreground text-xl tracking-tight">
-            <img src={oswapLogo} alt="OSWAP" className="h-7 w-7 object-contain" />
+            <motion.img
+              src={oswapLogo}
+              alt="OSWAP"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              className="h-7 w-7 object-contain"
+            />
             OSWAP
           </div>
           <div className="flex gap-6">

@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import oswapLogo from "@/assets/oswap-logo.png";
 
@@ -8,7 +9,13 @@ export function Navbar() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-2">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg md:text-xl tracking-tight">
-            <img src={oswapLogo} alt="OSWAP" className="h-7 w-7 object-contain" />
+            <motion.img
+              src={oswapLogo}
+              alt="OSWAP"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+              className="h-7 w-7 object-contain"
+            />
             OSWAP
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">

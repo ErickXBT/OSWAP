@@ -67,6 +67,50 @@ export default function Landing() {
 
       <VortexSection />
 
+      {/* About OSWAP */}
+      <section id="about" className="py-16 md:py-24">
+        <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="flex flex-col items-start text-left">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              About OSWAP
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+              One platform for crypto, fiat, and everyday spending.
+            </h2>
+            <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              OSWAP is a borderless payments platform that turns your crypto and fiat
+              balances into a single virtual Mastercard. Built for individuals,
+              freelancers, and global teams, we connect on-chain liquidity with the
+              merchants you already use — from SaaS subscriptions to travel and ads —
+              without the friction of traditional banking.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              Our mission is simple: make money truly portable. No borders, no waiting
+              periods, no hidden FX fees. Just precise, real-time payments wherever
+              you are.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+            {[
+              { value: "120+", label: "Countries supported" },
+              { value: "$2B+", label: "Processed volume" },
+              { value: "<3s", label: "Card issuance" },
+              { value: "24/7", label: "Crypto + fiat support" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="relative flex flex-col gap-2 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] overflow-hidden"
+              >
+                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/15 via-white/5 to-transparent opacity-60" />
+                <div className="pointer-events-none absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                <div className="relative text-3xl md:text-4xl font-bold">{stat.value}</div>
+                <div className="relative text-sm text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="py-16 md:py-24 bg-secondary/30 border-y border-border/40">
         <div className="max-w-[1200px] mx-auto px-6">

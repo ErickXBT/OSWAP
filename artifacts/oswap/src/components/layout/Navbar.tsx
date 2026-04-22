@@ -26,9 +26,6 @@ export function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-3 md:gap-4">
-          <Link href="/dashboard" className="hidden sm:inline text-sm font-medium hover:text-muted-foreground transition-colors">
-            Sign In
-          </Link>
           <Button asChild className="rounded-md font-medium text-sm px-4 md:px-6">
             <Link href="/dashboard">Get Started</Link>
           </Button>

@@ -79,7 +79,12 @@ export function HeroSphereSection() {
     camera.position.set(-7, -5, 11);
     camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    } catch {
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(w, h);
     renderer.shadowMap.enabled = true;
@@ -223,15 +228,15 @@ export function HeroSphereSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[700px] overflow-hidden bg-white">
+    <section className="relative w-full h-[420px] sm:h-[560px] md:h-[700px] overflow-hidden bg-white">
       <div ref={containerRef} className="absolute inset-0" />
-      <div className="absolute top-0 left-0 right-0 z-10 text-center pt-12 px-6 text-black">
-        <h1 className="font-['Montserrat'] text-[64px] md:text-[100px] font-black uppercase tracking-wider flex justify-center mb-2 leading-none">
+      <div className="absolute top-0 left-0 right-0 z-10 text-center pt-8 md:pt-12 px-4 md:px-6 text-black">
+        <h1 className="font-['Montserrat'] text-[44px] sm:text-[64px] md:text-[100px] font-black uppercase tracking-wider flex justify-center mb-2 leading-none">
           <span className="font-black">O</span>
           <span className="font-semibold">SW</span>
           <span className="font-light">AP</span>
         </h1>
-        <ul className="list-none flex justify-center gap-5 font-['Roboto'] text-base font-normal uppercase tracking-wider">
+        <ul className="list-none flex flex-wrap justify-center gap-3 sm:gap-5 font-['Roboto'] text-xs sm:text-base font-normal uppercase tracking-wider">
           <li><a href="#" className="text-black no-underline hover:opacity-60 transition-opacity">Trading</a></li>
           <li><a href="#" className="text-black no-underline hover:opacity-60 transition-opacity">Wallet</a></li>
           <li><a href="#" className="text-black no-underline hover:opacity-60 transition-opacity">Card</a></li>

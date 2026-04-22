@@ -65,12 +65,12 @@ export function PrecisionSection() {
   }, []);
 
   return (
-    <section className="py-32 bg-secondary/30 border-y border-border/40">
-      <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <section className="py-16 md:py-32 bg-secondary/30 border-y border-border/40">
+      <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         <div className="flex justify-center">
           <svg
             ref={stageRef}
-            className="stage w-full max-w-[28rem] aspect-square overflow-hidden text-foreground"
+            className="stage w-full max-w-[18rem] md:max-w-[28rem] aspect-square overflow-hidden text-foreground"
             viewBox="0 0 98 108"
             fill="currentColor"
           >

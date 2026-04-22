@@ -15,14 +15,14 @@ export default function Landing() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-6 max-w-[1200px] mx-auto min-h-[80vh] flex items-center">
-        <div className="grid md:grid-cols-2 gap-12 items-center w-full">
-          <div className="flex flex-col items-start text-left">
+      <section className="pt-16 md:pt-24 pb-12 md:pb-20 px-6 max-w-[1200px] mx-auto md:min-h-[80vh] flex items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+          <div className="flex flex-col items-start text-left order-2 md:order-1">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="font-['Poppins'] font-bold text-[3.6rem] md:text-[5.4rem] tracking-tight text-foreground leading-[1.05]"
+              className="font-['Poppins'] font-bold text-[2.5rem] sm:text-[3.6rem] md:text-[5.4rem] tracking-tight text-foreground leading-[1.05]"
               style={{ fontWeight: 700 }}
             >
               <span className="block">Spend</span>
@@ -33,7 +33,7 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-6 text-xl text-muted-foreground max-w-md"
+              className="mt-4 md:mt-6 text-base md:text-xl text-muted-foreground max-w-md"
             >
               Generate a global payment card from crypto or fiat. The precision of Stripe, built for a borderless economy.
             </motion.p>
@@ -41,7 +41,7 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-10 flex gap-4"
+              className="mt-6 md:mt-10 flex gap-4"
             >
               <Button size="lg" asChild className="text-base px-8 h-12 rounded-md">
                 <Link href="/dashboard">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -52,14 +52,14 @@ export default function Landing() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end order-1 md:order-2"
           >
             <motion.img
               src={oswapLogo}
               alt="OSWAP"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-              className="w-full max-w-[43.2rem] aspect-square object-contain"
+              className="w-2/3 sm:w-1/2 md:w-full max-w-[43.2rem] aspect-square object-contain"
             />
           </motion.div>
         </div>
@@ -68,9 +68,9 @@ export default function Landing() {
       <VortexSection />
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-secondary/30 border-y border-border/40">
+      <section id="features" className="py-16 md:py-24 bg-secondary/30 border-y border-border/40">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             <div className="flex flex-col gap-4">
               <div className="w-12 h-12 bg-background border border-border flex items-center justify-center rounded-lg">
                 <Zap className="w-6 h-6 text-foreground" />
@@ -107,11 +107,11 @@ export default function Landing() {
       <PrecisionSection />
 
       {/* How it Works */}
-      <section id="how-it-works" className="py-32">
+      <section id="how-it-works" className="py-20 md:py-32">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Three steps to borderless spending</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 md:mb-16">Three steps to borderless spending</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 relative">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-8 relative">
             <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-[1px] bg-border z-0"></div>
             
             {[
@@ -134,8 +134,8 @@ export default function Landing() {
       <SliceSection />
 
       {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground">
+      <footer className="border-t border-border py-8 md:py-12">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground text-center md:text-left">
           <div className="flex items-center gap-2 font-bold text-foreground text-xl tracking-tight">
             <img src={oswapLogo} alt="OSWAP" className="h-7 w-7 object-contain" />
             OSWAP

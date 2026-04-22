@@ -17,7 +17,12 @@ export function VortexSection() {
     camera.position.z = 5;
     camera.position.y = -4;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+    } catch {
+      return;
+    }
     renderer.setSize(w, h);
     container.appendChild(renderer.domElement);
 
@@ -118,7 +123,7 @@ export function VortexSection() {
   }, []);
 
   return (
-    <section className="w-full h-[600px] bg-black overflow-hidden">
+    <section className="w-full h-[360px] sm:h-[480px] md:h-[600px] bg-black overflow-hidden">
       <div ref={containerRef} className="w-full h-full" />
     </section>
   );

@@ -8,6 +8,8 @@ export function PrecisionSection() {
     const stage = stageRef.current;
     if (!stage) return;
 
+    const initialHTML = stage.innerHTML;
+
     const col = stage.querySelector(".col") as SVGGElement | null;
     const box = stage.querySelector(".box") as SVGGElement | null;
     if (!col || !box) return;
@@ -61,6 +63,7 @@ export function PrecisionSection() {
 
     return () => {
       tl.kill();
+      stage.innerHTML = initialHTML;
     };
   }, []);
 
